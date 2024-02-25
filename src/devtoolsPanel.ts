@@ -544,7 +544,7 @@ export class DevToolsPanel {
     }
 
     private setCdnParameters(msg: {revision: string, isHeadless: boolean}) {
-        this.currentRevision = msg.revision || CDN_FALLBACK_REVISION;
+        this.currentRevision = CDN_FALLBACK_REVISION;
         this.devtoolsBaseUri = `https://devtools.azureedge.net/serve_file/${this.currentRevision}/vscode_app.html`;
         this.isHeadless = msg.isHeadless;
         this.update();
